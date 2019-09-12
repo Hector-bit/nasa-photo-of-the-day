@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
-import Card from "./Card";
+import Card_Space from "./Card_Space";
 import axios from "axios";
+// import {
+//     Card, CardImg, CardText, CardBody,
+//     CardTitle, CardSubtitle, Button
+//   } from 'reactstrap';
 
 
 export default function CardGrid() {
@@ -24,14 +28,14 @@ export default function CardGrid() {
             return(
                 <div>
                     {[spaceCard].map(item => {
-                        console.log(Card)
+                        //console.log(Card_Space)
                         return(
-                            <Card 
-                            copyright={item.copyright}
-                            hdurl={item.id} 
+                            <Card_Space 
+                            copyright={item.title}
                             hdurl={item.hdurl}
                             date={item.date}
-                            explanation={item.explanation}/>
+                            explanation={item.explanation}
+                            />
                         )
                     })}
                 </div>
